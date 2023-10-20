@@ -1,4 +1,4 @@
-use std::{fs::canonicalize, process::Command};
+use std::process::Command;
 
 fn main() {
     let status = Command::new("make")
@@ -7,7 +7,7 @@ fn main() {
         .expect("Failed to run make");
 
     let bindings = bindgen::Builder::default()
-        .header("./tulipindicators/indicators.h")
+        .header("tulipindicators/indicators.h")
         .generate()
         .expect("Failed to generate bindings");
 
@@ -19,5 +19,4 @@ fn main() {
     // Assuming the .a file is named `libtulipindicators.a`
     println!("cargo:rustc-link-lib=static=indicators");
     println!("cargo:rustc-link-search=native=tulipindicators/");
-    // Point to the directory containing the .a file
 }
