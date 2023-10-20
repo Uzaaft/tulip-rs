@@ -1,6 +1,5 @@
 extern crate libc;
 use libc::c_int;
-use std::ptr;
 use tulip_rs::{ti_sma, ti_sma_start, TI_OKAY};
 
 fn print_array(p: &[f64]) {
