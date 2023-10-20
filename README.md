@@ -12,3 +12,9 @@ cargo add --git https://github.com/Uzaaft/tulip-rs
 ```
 
 It should work on OS X and Linux. Haven't been tested on Windows. 
+
+## Documentation
+To see the documentation, run:
+```bash
+cargo doc --no-deps --open
+```
